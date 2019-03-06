@@ -1,6 +1,6 @@
 {
   "name": "vue-ui-awesome",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vue awesome ui components repo",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullStackDemo/vue-awesome-ui.git"
+    "url": "git+https://github.com/fullStackDemo/vue-ui-awesome.git"
   },
   "keywords": [
     "vue",
@@ -18,7 +18,7 @@
   "author": "alex2011",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fullStackDemo/vue-awesome-ui/issues"
+    "url": "https://github.com/fullStackDemo/vue-ui-awesome/issues"
   },
-  "homepage": "https://github.com/fullStackDemo/vue-awesome-ui#readme"
+  "homepage": "https://github.com/fullStackDemo/vue-ui-awesome#readme"
 }
