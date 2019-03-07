@@ -7,7 +7,7 @@
 				</div>
 				<h3>Vue component</h3>
         <div class="navBox">
-          <div class="navItem" v-for="(item, index) in menuData" :key="index">
+          <div class="navItem" :class="{'active': currentNavName == item.name}" v-for="(item, index) in menuData" :key="index">
             {{item.name}}
           </div>
         </div>
@@ -25,10 +25,12 @@ export default {
 	name: 'app',
 	data() {
     const currentComponent = menuData[0].component;
+    const currentNavName = menuData[0].name;
 		return {
       boxHeight: 0,
       menuData,
-      currentComponent
+      currentComponent,
+      currentNavName,
 		};
 	},
 	mounted() {
