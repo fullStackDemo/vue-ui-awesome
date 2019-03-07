@@ -16,5 +16,13 @@ module.exports = {
       // extracted common chunks and vendor chunks.
       chunks: ['chunk-verdors', 'chunk-common', 'index']
     }
+  },
+  productionSourceMap: false,
+  configureWebpack: config => {
+    console.log('>>>', config);
+    
   }
+
+
+
 };

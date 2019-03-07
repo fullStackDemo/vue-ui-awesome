@@ -7,6 +7,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
     "vue": "^2.6.8"
   },
   "devDependencies": {
