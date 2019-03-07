@@ -17,7 +17,7 @@ export default {
 	name: 'Waterfall',
 	data() {
 		return {
-			column: 3, //列数
+			// column: 3, //列数
 			boxWidth: null, //parent box宽度
 			itemWidth: null, //child box宽度
 			space: 10, //间歇距离
