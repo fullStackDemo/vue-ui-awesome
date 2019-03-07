@@ -1,14 +1,13 @@
 {
   "name": "vue-ui-awesome",
-  "version": "0.0.3",
-  "private": true,
+  "version": "0.0.4",
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.6.6"
+    "vue": "^2.6.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",
@@ -44,7 +43,7 @@
     "not ie <= 8"
   ],
   "description": "## Project setup ``` npm install ```",
-  "main": "babel.config.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fullStackDemo/vue-ui-awesome.git"
@@ -59,5 +58,8 @@
   "bugs": {
     "url": "https://github.com/fullStackDemo/vue-ui-awesome/issues"
   },
-  "homepage": "https://github.com/fullStackDemo/vue-ui-awesome#readme"
+  "homepage": "https://github.com/fullStackDemo/vue-ui-awesome#readme",
+  "directories": {
+    "example": "example"
+  }
 }
