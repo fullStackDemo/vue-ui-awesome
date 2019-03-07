@@ -1,9 +1,11 @@
 
 import Hello from './components/Hello.vue';
+import Waterfall from './components/Waterfall/src/index.vue';
 
 //all vue components
 const components = {
-  Hello
+  Hello,
+  Waterfall
 };
 
 

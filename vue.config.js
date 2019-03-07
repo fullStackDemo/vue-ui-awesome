@@ -1,4 +1,5 @@
 
+const { resolve } = require('path');
 
 module.exports = {
   pages: {
@@ -18,9 +19,11 @@ module.exports = {
     }
   },
   productionSourceMap: false,
-  configureWebpack: config => {
+  chainWebpack: config => {
     console.log('>>>', config);
-    
+    config.resolve.alias.set('@c', resolve('src/components'))
+      .set('@data', resolve('example/data'))
+      .set('@less', resolve('example/less'))
   }
 
 
