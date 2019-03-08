@@ -1,6 +1,6 @@
 {
   "name": "vue-ui-awesome",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -48,7 +48,7 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "description": "## Project setup ``` npm install ```",
+  "description": "vue components",
   "main": "src/index.js",
   "repository": {
     "type": "git",
