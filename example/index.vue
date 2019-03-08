@@ -24,12 +24,9 @@ import { mapMutations } from 'vuex';
 export default {
 	name: 'app',
 	data() {
-		// const currentComponent = menuData[0].component;
-		// const currentNavName = menuData[0].name;
 		return {
 			boxHeight: 0,
 			menuData,
-			// currentNavName: '',
 		};
 	},
 	computed: {
