@@ -30,12 +30,13 @@ export default {
 		};
 	},
 	computed: {
-		currentNavName() {
-			return this.$store.state.nav;
+		currentNavName: function(){
+      const nav =  this.$store.state.nav;
+      return nav ? nav : this.menuData[0].name;
 		},
-		currentComponent() {
+		currentComponent: function() {
 			const data = this.menuData.find(n => n.name == this.$store.state.nav);
-			return data ? data.component : null;
+			return data ? data.component : this.menuData[0].component;
 		},
 	},
 	mounted() {
