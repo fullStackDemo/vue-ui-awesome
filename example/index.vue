@@ -7,7 +7,7 @@
 				</div>
 				<h3>Vue component</h3>
 				<div class="navBox">
-					<div :class="{'active': currentNavName == item.name}" @click="tabClick(item)" :key="index" class="navItem" v-for="(item, index) in menuData">{{item.name}}</div>
+					<div :class="{'active': currentNavName == item.name}" :key="index" @click="tabClick(item)" class="navItem" v-for="(item, index) in menuData">{{item.name}}</div>
 				</div>
 			</div>
 			<div class="boxRight">
@@ -20,17 +20,26 @@
 <script>
 //left menu data
 import menuData from '@data/menu.js';
+import { mapMutations } from 'vuex';
 export default {
 	name: 'app',
 	data() {
-		const currentComponent = menuData[0].component;
-		const currentNavName = menuData[0].name;
+		// const currentComponent = menuData[0].component;
+		// const currentNavName = menuData[0].name;
 		return {
 			boxHeight: 0,
 			menuData,
-			currentComponent,
-			currentNavName,
+			// currentNavName: '',
 		};
+	},
+	computed: {
+		currentNavName() {
+			return this.$store.state.nav;
+		},
+		currentComponent() {
+			const data = this.menuData.find(n => n.name == this.$store.state.nav);
+			return data ? data.component : null;
+		},
 	},
 	mounted() {
 		this.calcHeight();
@@ -39,14 +48,18 @@ export default {
 			this.calcHeight();
 		});
 	},
+	created() {},
 	methods: {
+		...mapMutations(['setNav', 'setNum']),
 		calcHeight() {
 			this.boxHeight = window.innerHeight;
-    },
-    tabClick(item){
-      this.currentComponent = item.component;
-      this.currentNavName = item.name;
-    }
+		},
+		tabClick(item) {
+			this.currentComponent = item.component;
+			this.currentNavName = item.name;
+			this.setNav(item.name);
+			this.setNum(1);
+		},
 	},
 };
 </script>
