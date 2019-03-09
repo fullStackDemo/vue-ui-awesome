@@ -2,6 +2,7 @@
 node_modules
 node_modules11
 node_modules22
+.history
 
 # local env files
 .env.local
